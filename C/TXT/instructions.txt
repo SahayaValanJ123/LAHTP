@@ -1,0 +1,131 @@
+In x86_64 assembly language, instructions are composed of different elements such as mnemonics, operands, registers, and addressing modes. Here’s a breakdown of every key term used in assembly language for x86_64 architecture:
+1. Mnemonics
+
+A mnemonic is the symbolic name of an assembly instruction, representing the operation to be performed. Some common mnemonics:
+
+    mov: Moves data from one location to another.
+        Example: mov rax, rbx (move the contents of rbx into rax).
+    add: Adds two operands.
+        Example: add rax, 5 (add 5 to the contents of rax).
+    sub: Subtracts the second operand from the first.
+        Example: sub rax, rbx (subtract rbx from rax).
+    mul: Multiplies two operands.
+        Example: mul rbx (multiply rax by rbx).
+    div: Divides rax by another register, storing the quotient in rax and the remainder in rdx.
+        Example: div rbx.
+    cmp: Compares two operands.
+        Example: cmp rax, rbx (compare rax and rbx).
+    jmp: Jumps to a specified address.
+        Example: jmp label (jump to the address labeled label).
+    call: Calls a subroutine.
+        Example: call func (jump to func and push return address onto the stack).
+    ret: Returns from a subroutine.
+        Example: ret (pop the return address from the stack and jump to it).
+    push: Pushes a value onto the stack.
+        Example: push rax (push the value in rax onto the stack).
+    pop: Pops a value off the stack.
+        Example: pop rbx (pop the top value from the stack into rbx).
+
+2. Operands
+
+Operands are the data on which the instructions operate. An instruction typically operates on one, two, or sometimes three operands. The operands can be:
+
+    Registers: Values stored in CPU registers.
+        Example: add rax, rbx (both rax and rbx are registers).
+    Memory addresses: Values stored at a specific location in memory.
+        Example: mov rax, [rbx] (load the value at the memory address pointed to by rbx into rax).
+    Immediate values: Literal values hardcoded into the instruction.
+        Example: mov rax, 10 (moves the immediate value 10 into rax).
+
+3. Addressing Modes
+
+Addressing modes specify how the operands are accessed. These are the most common addressing modes in x86_64:
+
+    Immediate addressing: The operand is a constant value.
+        Example: mov rax, 5 (move the immediate value 5 to rax).
+    Register addressing: The operand is a register.
+        Example: mov rax, rbx (move the value in rbx to rax).
+    Direct addressing: The operand is a memory address.
+        Example: mov rax, [0x601050] (move the value at memory address 0x601050 to rax).
+    Indirect addressing: The operand is in memory, and the memory address is held in a register.
+        Example: mov rax, [rbx] (move the value at the memory address stored in rbx to rax).
+    Base-plus-offset addressing: A memory location is addressed as the sum of a base register and an offset.
+        Example: mov rax, [rbx+4] (move the value at rbx + 4 into rax).
+    Scaled-index addressing: The memory location is computed using a base register, an index register, and a scaling factor (usually for arrays).
+        Example: mov rax, [rbx+rcx*4] (move the value at rbx + (rcx * 4) to rax).
+
+4. Registers
+
+Registers are fast, small storage areas in the CPU. There are general-purpose registers and special-purpose registers. Some common registers used in x86_64 instructions include:
+
+    General-purpose registers: rax, rbx, rcx, rdx, rsi, rdi, rbp, rsp, r8 to r15.
+        Example: mov rax, rbx (moves the value of rbx into rax).
+    Special registers:
+        rip (Instruction Pointer): Points to the next instruction to be executed.
+        rflags/eflags (Flags Register): Holds status flags from arithmetic operations (e.g., carry, zero, overflow).
+
+5. Instruction Types
+
+There are various types of instructions in x86_64 assembly language, each with its own purpose:
+
+    Data Movement Instructions:
+        mov: Moves data between registers or between memory and registers.
+        lea: Load Effective Address, used to calculate addresses.
+    Arithmetic Instructions:
+        add, sub: Perform addition or subtraction.
+        mul, div: Multiplication and division.
+        inc, dec: Increment and decrement values.
+    Logical Instructions:
+        and, or, xor: Perform bitwise logical operations.
+        not: Perform bitwise negation.
+    Control Flow Instructions:
+        jmp: Unconditional jump to a label or address.
+        call: Call a subroutine and save the return address.
+        ret: Return from a subroutine.
+        je, jne: Conditional jumps based on flag conditions (e.g., je = jump if equal).
+    Stack Operations:
+        push, pop: Add or remove values from the stack.
+        leave: Clean up the stack before returning from a function.
+    String Manipulation Instructions:
+        movsb, movsw, movsd: Move strings of bytes, words, or double words.
+        stosb, stosw, stosd: Store strings of bytes, words, or double words.
+
+6. Flags
+
+The Flags Register (rflags in x86_64) holds various status flags that are set or cleared based on the result of arithmetic or logical operations. Common flags include:
+
+    ZF (Zero Flag): Set when the result of an operation is zero.
+    SF (Sign Flag): Set when the result of an operation is negative.
+    CF (Carry Flag): Set when an unsigned overflow occurs in an arithmetic operation.
+    OF (Overflow Flag): Set when a signed overflow occurs.
+    PF (Parity Flag): Set if the number of 1 bits in the least significant byte of the result is even.
+    IF (Interrupt Flag): Controls whether interrupts are enabled.
+
+7. Memory Addressing Terms
+
+Memory addressing refers to how operands are accessed from memory. Key terms include:
+
+    Stack: A LIFO (Last-In-First-Out) data structure used to store function call return addresses, local variables, etc.
+        Example: push and pop are used to manipulate the stack.
+    Heap: Dynamically allocated memory managed by the operating system.
+    Stack Pointer (rsp): Points to the current top of the stack.
+    Base Pointer (rbp): Points to the base of the current function's stack frame.
+    Effective Address: The final memory address computed in an instruction using registers, offsets, and scaling factors (used in lea and memory instructions).
+
+8. System Instructions
+
+    syscall: Invokes a system call, transferring control to the operating system.
+    iretq: Returns from an interrupt handler.
+
+Example of an Instruction in Assembly
+
+asm
+
+mov rax, [rbx+rcx*4] ; Move the value at the address (rbx + rcx * 4) into rax
+
+    Mnemonic: mov (move data)
+    Operands:
+        rax (destination register)
+        [rbx+rcx*4] (source operand: a memory address calculated using indirect addressing and scaling)
+
+Understanding these terms helps to demystify assembly instructions, allowing you to interpret or write assembly code for the x86_64 architecture. Let me know if you need more detail on any specific instructions!

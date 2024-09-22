@@ -1,0 +1,69 @@
+In C programming, keywords are reserved words that have special meaning to the compiler. They are used to perform specific operations and cannot be used as identifiers (e.g., variable names, function names) in your program. Here is a list of the most commonly used keywords in C, along with a brief explanation of each:
+1. Data Types
+
+    int: Declares an integer variable.
+    char: Declares a character variable (single character).
+    float: Declares a floating-point variable (single-precision).
+    double: Declares a double-precision floating-point variable.
+    void: Specifies that a function does not return a value, or used in the declaration of pointers.
+
+2. Control Flow
+
+    if: Starts a conditional statement.
+    else: Specifies a block of code to execute if the condition in if is false.
+    switch: Allows multi-way branching based on the value of a variable.
+    case: Specifies a block of code to execute for a specific value in a switch statement.
+    default: Specifies a block of code to execute if no case matches in a switch statement.
+    for: Starts a for loop (iteration).
+    while: Starts a while loop, executing as long as the condition is true.
+    do: Starts a do-while loop, executing the loop at least once before checking the condition.
+    break: Exits from a loop or switch statement.
+    continue: Skips the rest of the loop iteration and goes to the next iteration.
+    return: Exits from a function and optionally returns a value.
+
+3. Storage Class Specifiers
+
+    auto: Declares automatic (local) variables (default for local variables).
+    register: Suggests storing the variable in a register for faster access.
+    static: Declares a variable with a static lifetime, preserving its value between function calls.
+    extern: Declares a variable defined in another file or scope.
+    volatile: Indicates that the value of a variable can be changed at any time, preventing optimization by the compiler.
+    const: Declares a constant variable (its value cannot be changed after initialization).
+
+4. Type Qualifiers
+
+    signed: Declares a signed data type (e.g., signed int).
+    unsigned: Declares an unsigned data type (e.g., unsigned int).
+    short: Declares a short integer.
+    long: Declares a long integer.
+
+5. User-Defined Types
+
+    struct: Defines a structure (a composite data type).
+    union: Defines a union (a data type that can hold any one of its members at a time).
+    typedef: Creates an alias name for a data type.
+    enum: Defines an enumerated type (a set of named integer constants).
+
+6. Function and Pointer Keywords
+
+    sizeof: Returns the size (in bytes) of a data type or variable.
+    void: Used for functions that do not return a value or to define a generic pointer.
+    goto: Jumps to a labeled statement within a function.
+
+7. Others
+
+    volatile: Tells the compiler that a variable's value may change unexpectedly, so it should not optimize it.
+    const: Declares a constant value (cannot be changed after initialization).
+    inline: Suggests that the compiler should insert the complete body of the function in every place where the function is called.
+
+8. Memory Management (in the context of C)
+
+    malloc: Used to allocate a specified number of bytes of memory during the execution of a program.
+    free: Frees memory that was previously allocated by malloc.
+    calloc: Allocates memory for an array of elements and initializes them to zero.
+    realloc: Resizes the memory allocated previously by malloc or calloc.
+
+9. Error Handling and Miscellaneous
+
+    assert: Used to perform diagnostics by checking assumptions made by the program.
+    exit: Terminates the program.
