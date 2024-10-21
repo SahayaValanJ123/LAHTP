@@ -45,5 +45,5 @@ int main()
     printf("valan : %s \n", valan);
     printf("valan_one : %s \n", valan_one);
     printf("valan_other : %s \n", valan_other);
-    printf("valan_another : %s \n", valan_another);
+    printf("valan_another : %s \n", valan_another); 
 }

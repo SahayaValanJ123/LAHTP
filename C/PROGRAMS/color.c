@@ -13,9 +13,9 @@ void reset () {
 
 int main () {
   red();
-  printf("Hello ");
+  printf("SAHAYA ");
   yellow();
-  printf("world\n");
+  printf("VALAN\n");
   reset();
   return 0;
 }
