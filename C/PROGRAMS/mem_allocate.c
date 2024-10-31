@@ -4,6 +4,7 @@
 
 
 int dma(){
+    //DYNAMIC
     int *array,i,n;
     printf("enter the no.of n :");
     scanf("%d",&n);
@@ -17,12 +18,16 @@ int dma(){
         printf("array [%d] = %d\n",i,array[i]);
     }
     printf("But Memory of a is : %d\n",sizeof(array));
+    free(array);
+    return 0;
     
 }
 
 
 int main()
 {
+    // STATIC
+
 //    int a[10],i,n;
 //    printf("Enter the no.of inputs : ");
 //    scanf("%d",&n);
@@ -36,5 +41,16 @@ int main()
 //    }
 //    printf("But Memory of a is : %d",sizeof(a));
 
+
+
    dma();
+
+    // int *p,a[5];
+    // a[0]=100;
+    // p = &a;
+    // printf("address of p : %p\n",&p);
+    // printf("value of a : %d\n",*p);
+
+    // int b=17;
+    // printf("%#x\n",b);
 }

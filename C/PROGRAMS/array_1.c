@@ -29,7 +29,7 @@ int main(){
 //when we didnt specify null charach=ter the the variable 
 //memory exeeds..this is called buffer overflow
 
-    printf("%s",sona3);
+    printf("%s",sona);
 
 
 }

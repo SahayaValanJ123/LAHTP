@@ -23,9 +23,10 @@ float area(int rad){
 int main(){
     int rad;
     int c=cube(10);
-   printf("cube : %d\n",c);
+    printf("cube : %d\n",c);
 
-   printf("ENter radius to calculate circle : ");
-   scanf("%d",&rad);
-   printf("\nDiameter of the circle : %d \nCircumference of the circle : %.2f\nArea of the Cicle : %.2f\n",dia(rad),circum(rad),area(rad));
+    printf("ENter radius to calculate circle : ");
+    scanf("%d",&rad);
+    printf("\nDiameter of the circle : %d \nCircumference of the circle : %.2f\nArea of the Cicle : %.2f\n",dia(rad),circum(rad),area(rad));
+    return 0;
 }

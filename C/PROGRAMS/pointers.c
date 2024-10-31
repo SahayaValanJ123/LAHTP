@@ -46,4 +46,27 @@ int main()
     printf("valan_one : %s \n", valan_one);
     printf("valan_other : %s \n", valan_other);
     printf("valan_another : %s \n", valan_another); 
+
+
+    printf("=================\n");
+    char *ptr=&valan_another[0];
+    char *nptr=&valan[0];
+    printf("value of ptr = '%p\n",ptr);
+    printf("value of ptr = '%p\n",nptr);
+
+    for (int j=0;j<(sizeof(valan)+sizeof(valan_one)+sizeof(valan_other)+sizeof(valan_another));j++){
+        printf(" *ptr = %c ; ptr = %p\n",*ptr,ptr);
+        ptr++;
+    }
+    
+     for (int i=0;i<30;i++){
+        printf(" *nptr = %c ; nptr = %p\n",*nptr,nptr);
+        ptr--;
+    }
+
+    //random address 
+    int *x=0x10;
+    printf("%p\n",x);
+    printf("%d\n",*x);  //gives segmentation fault ....
+    
 }
