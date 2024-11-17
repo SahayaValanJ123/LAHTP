@@ -4,13 +4,12 @@
 
 int add(int x1,int x2){
     printf("addition of two values : %d\n",x1+x2);
-}
-int sub(int x1,int x2){
+}int sub(int x1,int x2){
     printf("subtraction of two values : %d\n",x1-x2);
 }int mul(int x1,int x2){
     printf("multiplication of two values : %d\n",x1*x2);
-}float divi(int x1,int x2){
-    printf("Division of two values : %d\n",x1/x2);
+}float divi(float x1,float x2){
+    printf("Division of two values : %lf\n",x1/x2);
 }
 
 int main (int argc , char *argv[]){
