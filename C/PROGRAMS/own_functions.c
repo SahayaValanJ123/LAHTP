@@ -8,10 +8,20 @@ char to_lower(char *str);
 int is_upper(char *str);
 int is_lower(char *str);
 int str_cmp(char *a, char *b);
-
+int reverse(int n);
 
 
 int main(){
+
+
+    //FOR REVERSE A SINGLE NUMBER ABOVE 2 DIGITS
+    int num,rev;
+    num=441;
+    rev = reverse(num);
+    printf("Reversed number is : %d\n",rev);
+
+
+
     //FOR UPPPERCASE 
     char string[100];
     printf("Enter the string name : ");
@@ -19,8 +29,9 @@ int main(){
     to_upperCase(string);
     printf("Upper case string is : %s\n",string);  
     
+
     //FOR LOWERCASE 
-     char str[100];
+    char str[100];
     printf("Enter the string name : ");
     scanf("%s",str);
     to_lower(str);
@@ -31,6 +42,7 @@ int main(){
     int array[] =  {1,2,3,4,4,4,5,56,6};
     int len = array_len(sizeof(array),sizeof(int));
     printf("Lenght of array is : %d\n",len);
+
 
     //FOR STRING COMPARE
     char a[10]="sahaya";
@@ -51,6 +63,12 @@ int main(){
     
 
 }
+
+
+
+
+
+
 
 void to_upperCase(char *str){
     // while (*str){
@@ -139,4 +157,15 @@ int str_cmp(char *a, char *b)
 }
 
 
-
+int reverse(int n)
+{
+    int reversed = 0, digit;
+    int originalNum = n;
+    while (n != 0)
+    {
+        digit = n % 10;
+        reversed = reversed * 10 + digit;
+        n /= 10;
+    }
+    return reversed;
+}
