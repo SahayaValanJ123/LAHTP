@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../PROJECTS"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../leetcode"
+		},
+		{
+			"path": "../assembly"
+		},
+		{
+			"path": "../DS"
+		}
+	],
+	"settings": {}
+}
