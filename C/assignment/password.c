@@ -7,6 +7,7 @@ int size;
 
 int check_pass(char *password, int size)
 { // SAha!@#
+// weekest- 3 weak 4  average-5 medium-7 strong-8 strongest-9
     int i;
     for (i = 0; i < size; i++)
     {
@@ -53,7 +54,7 @@ int check_pass(char *password, int size)
         }
     }
 }
-// weekest- 3 weak 4  average-5 medium-7 strong-8 strongest-9
+
 
 void getPassword(char *password, size_t SIZE)
 {
