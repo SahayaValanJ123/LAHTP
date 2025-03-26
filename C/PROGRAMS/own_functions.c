@@ -9,6 +9,7 @@ int is_upper(char *str);
 int is_lower(char *str);
 int str_cmp(char *a, char *b);
 int reverse(int n);
+int stringlen(char *c);
 
 
 int main(){
@@ -64,10 +65,21 @@ int main(){
 
 }
 
+//####################
+int stringlen(char *c)
+{
+    int count = 0, i;
+    while (1)
+    {
+        if (*(c + count) != 0){
+            count++;}
+        else{
+            break;}
+}
+return count;
+}
 
-
-
-
+//####################
 
 
 void to_upperCase(char *str){
@@ -86,6 +98,7 @@ void to_upperCase(char *str){
     }
 
 }
+//####################
 
 char to_lower(char *str){
     // while(*str){
@@ -103,9 +116,14 @@ char to_lower(char *str){
     }
 }
 
+//####################
+
 int array_len(int sizeof_arr, int sizeof_datatype){
     return sizeof_arr/sizeof_datatype;
 }
+
+//####################
+
 
 int is_upper(char *str){
     if (str >=65 && str <=90){
