@@ -1,0 +1,16 @@
+0000000000001230 <write>:
+  1230: b8 01 00 00 00          mov    eax,0x1        ; __NR_write (syscall number 1)
+  1235: 0f 05                   syscall              ; enter kernel mode
+  1237: c3                      ret
+
+At this moment:
+
+    syscall moves CPU from Ring 3 → Ring 0
+
+    OS picks up the syscall number from rax (1 = write)
+
+    Uses system call table to find the correct kernel function
+
+    Executes it in kernel mode
+
+    Uses sysret to return to user mode

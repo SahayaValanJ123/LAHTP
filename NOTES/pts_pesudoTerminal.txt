@@ -1,0 +1,43 @@
+Linux file descriptors  
+	0 = stdin (standard input)
+
+	1 = stdout (standard output)
+
+	2 = stderr (standard error)
+//pipes of linux
+
+Now — when you run a program (like python in terminal), those file descriptors are usually linked to the terminal (pseudo-terminal)(pts) device it’s running on.
+That’s what this is:
+
+/dev/pts/1
+
+→ This is your virtual terminal device.
+📌 What happens when you cat /dev/pts/1 in another terminal?
+
+When you do:
+
+cat /dev/pts/1
+
+You open the same terminal device for reading.
+And now, both your python process and your cat command are fighting over stdin/stdout of the same terminal (/dev/pts/1).
+
+📌 That’s why your typing seems to alternate — sometimes it goes to Python, sometimes to cat. The terminal device reads keypresses and dispatches them to whichever process is waiting at that instant. Real-time scheduling only kicks in once the process is ready to run on CPU — not while it's waiting for input.
+
+
+📦 How does it work with a terminal window or SSH session?
+
+When you open a terminal:
+
+    Kernel creates a new PTY pair: master (ptmx) and slave (/dev/pts/N).
+
+    Terminal emulator attaches to the master side.
+
+    When you type something, the terminal emulator writes it to the master side.
+
+    Any program (like bash or Python) connected to /dev/pts/N gets that input through stdin.
+
+    The program’s stdout/stderr writes back to /dev/pts/N.
+
+    The terminal emulator reads that output from the master side and displays it on your screen.
+
+So /dev/pts/N is like a “fake” terminal device that behaves exactly like a real TTY (physical terminal) for processes inside your terminal.

@@ -1,0 +1,13 @@
+Accessing memory
+
+An important difference in kernel programming is how to access and allocate memory. Due to the fact that kernel programming is very close to the physical machine, there are important rules for memory management. First, it works with several types of memory:
+
+        Physical memory
+        Virtual memory from the kernel address space
+        Virtual memory from a process's address space
+        Resident memory - we know for sure that the accessed pages are present in physical memory
+
+
+scheduler 
+ # cat /sys/block/sda/queue/scheduler
+

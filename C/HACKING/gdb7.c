@@ -12,6 +12,8 @@ int pass(char *password){
 
 }
 int main(int argc,char *argv[]){
+	int a;
+	scanf("%d",&a);
     if(argc<2){
         printf("usage : %s <password>\n",argv[0]);
     }

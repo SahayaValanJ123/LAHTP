@@ -1,0 +1,75 @@
+$ sudo lsof /dev/ptmx
+$ man chrt
+$ ls -l /proc/$$/fd
+$ pidof gdb7
+$ ps -eLo pid,ppid,cmd,cls,rtprio | grep python
+$ sudo chrt -r -p 30 309443
+$ cat /sys/block/sda/queue/scheduler
+$ cat /proc/$$/status | grep CapEff
+$
+$ mkfifo jsv
+$ echo "1+2" > jsv
+$ bc < jsv
+$
+$ sqlmap -u "https://vvcoe.org/page.php?id=2" --batch --level=5 --risk=3 --dbs
+$ gobuster dir -u https://vvcoe.org -w /usr/share/wordlists/dirb/common.txt -x php,asp,aspx
+$ nmap --script ssl-cert,ssl-enum-ciphers -p 443 vvcoe.org
+$ testssl.sh https://vvcoe.org
+$ openssl s_client -connect vvcoe.org:443
+$ dirb http://vvcoe.org/
+$
+$ curl ifconfig.me
+$ proxychains curl ifconfig.me
+$ find / -perm -4000 2>/dev/null
+$ nano /usr/include/x86_64-linux-gnux32/asm/unistd_64.h
+$
+$ udevadm monitor --property
+$ rfkill list
+$ dmesg | grep -i firmware
+$ sudo ip link set wlan0 up
+$ sudo ip link set wlan0 down
+$ dmesg | grep -i hid
+$ evtest
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+### hid - human interface device (keyboard,mice)
+$  //kernel and ipc
+$ ### https://chatgpt.com/share/680936c4-54c8-8002-a69d-9b4a1f61a5f4    
+$
+$
+$ readelf --all "elffile"
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$ 
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$

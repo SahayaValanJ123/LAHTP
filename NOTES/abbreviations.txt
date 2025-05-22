@@ -1,0 +1,3 @@
+lsb - linux standard base
+abi - application binary interface
+elf - Executable and linkable format
