@@ -1,7 +1,10 @@
 #include <stdio.h>
 
 int main(){
-    enum days {sun,mon,tue=99,wed};
-    enum days today = tue;
-    printf("%d\n",today);
+   typedef enum days {sun,mon,tue=0,wed} weekday; 
+
+    const char *daynames[]  ={"sunday","monday","tesday","wednesday"};
+    
+    weekday today = wed;
+    printf("today : %s \n",daynames[today]);
 }
