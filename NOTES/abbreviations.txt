@@ -1,3 +1,10 @@
 lsb - linux standard base
 abi - application binary interface
 elf - Executable and linkable format
+MBR - master boot record
+VBR - volume boot record
+BUI - Bus Interface Unit
+GDT - Global Descriptor Table
+LDT - Local Descriptor Table
+LBA - Logical Block Address
+GPT - Guid PArtition Table

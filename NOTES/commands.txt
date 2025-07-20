@@ -50,12 +50,15 @@ $
 $
 $ readelf --all "elffile"
 $
+//for change lock button work
+$ sudo nano /usr/bin/xflock4
+//add this line at very top
+$ dm-tool lock && exit 0
 $
 $
 $
-$
-$
-$
+//autostart script
+$ xfce4-session-settings
 $
 $
 $ 

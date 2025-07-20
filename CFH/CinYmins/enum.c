@@ -5,6 +5,6 @@ int main(){
 
     const char *daynames[]  ={"sunday","monday","tesday","wednesday"};
     
-    weekday today = wed;
+    weekday today = tue;
     printf("today : %s \n",daynames[today]);
 }
